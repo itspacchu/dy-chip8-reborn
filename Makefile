@@ -1,6 +1,5 @@
 .PHONY: clean
 
-
 ifeq ($(OS),Windows_NT)
     BIN := chip8-rb.exe
 else

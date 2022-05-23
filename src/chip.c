@@ -321,8 +321,12 @@ void emulator(struct state* state)
     assert(state);
     // loopity
     while(!WindowShouldClose()){
+            state->current_counter_val = GetTime();
             state->delta_time = GetFrameTime(); 
             state->delta_accumulation = GetTime();
+            state->previous_counter_val = state->current_counter_val;
+
+
 
             /** Emulate one cycle **/
             fetch(state);
